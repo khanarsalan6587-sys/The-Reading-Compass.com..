@@ -1,0 +1,2456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Reading Compass – Books That Change the Way You Think</title>
+  <meta name="description" content="Discover handpicked books on philosophy, psychology, purpose, wealth, biographies, and timeless wisdom. The Reading Compass helps you find books that truly transform your life." />
+  <meta name="keywords" content="best books to read in 2026, books that change your life, best philosophy books, best psychology books, books about purpose and meaning, timeless classic books" />
+  <meta name="author" content="The Reading Compass" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Reading Compass – Books That Change the Way You Think" />
+  <meta property="og:description" content="Handpicked books on philosophy, psychology, purpose, and timeless wisdom." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thereadingcompass.com" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=1200" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Reading Compass" />
+  <meta name="twitter:description" content="Books That Change the Way You Think" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "The Reading Compass",
+    "url": "https://thereadingcompass.com",
+    "description": "Curated book recommendations on philosophy, psychology, purpose, and wisdom",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://thereadingcompass.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── CSS RESET & VARIABLES ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0F172A;
+      --navy-mid: #1E293B;
+      --navy-light: #334155;
+      --gold: #D4AF37;
+      --gold-light: #E8C84A;
+      --gold-dim: rgba(212,175,55,0.15);
+      --white: #FFFFFF;
+      --gray: #F8FAFC;
+      --gray-mid: #E2E8F0;
+      --gray-text: #64748B;
+      --text-dark: #0F172A;
+      --text-body: #334155;
+      --radius: 12px;
+      --radius-lg: 20px;
+      --shadow: 0 4px 24px rgba(15,23,42,0.10);
+      --shadow-lg: 0 16px 48px rgba(15,23,42,0.18);
+      --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    [data-theme="dark"] {
+      --white: #0F172A;
+      --gray: #1E293B;
+      --gray-mid: #334155;
+      --gray-text: #94A3B8;
+      --text-dark: #F1F5F9;
+      --text-body: #CBD5E1;
+      --navy: #F1F5F9;
+      --navy-mid: #E2E8F0;
+      --shadow: 0 4px 24px rgba(0,0,0,0.4);
+      --shadow-lg: 0 16px 48px rgba(0,0,0,0.5);
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--text-body);
+      line-height: 1.7;
+      overflow-x: hidden;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--gray); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+    /* ── READING PROGRESS ── */
+    #progress-bar {
+      position: fixed; top: 0; left: 0; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      width: 0%; z-index: 9999; transition: width 0.1s;
+    }
+
+    /* ── NAVIGATION ── */
+    nav {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(15,23,42,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212,175,55,0.2);
+      transition: var(--transition);
+    }
+
+    .nav-inner {
+      max-width: 1280px; margin: 0 auto;
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 70px;
+    }
+
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-logo-icon {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+    }
+
+    .nav-logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.01em;
+    }
+
+    [data-theme="dark"] .nav-logo-text { color: #F1F5F9; }
+
+    .nav-links {
+      display: flex; align-items: center; gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute; bottom: -4px; left: 0;
+      width: 0; height: 2px;
+      background: var(--gold);
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-actions { display: flex; align-items: center; gap: 1rem; }
+
+    .nav-search {
+      display: flex; align-items: center;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8px;
+      padding: 6px 12px; gap: 8px;
+      transition: var(--transition);
+    }
+
+    .nav-search:focus-within {
+      border-color: var(--gold);
+      background: rgba(212,175,55,0.1);
+    }
+
+    .nav-search input {
+      background: none; border: none; outline: none;
+      color: #fff; font-size: 0.85rem; width: 140px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .nav-search input::placeholder { color: rgba(255,255,255,0.4); }
+    .nav-search svg { color: rgba(255,255,255,0.5); flex-shrink: 0; }
+
+    .theme-toggle {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8px;
+      padding: 8px; cursor: pointer;
+      color: rgba(255,255,255,0.7);
+      transition: var(--transition);
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .theme-toggle:hover { background: var(--gold-dim); border-color: var(--gold); color: var(--gold); }
+
+    .btn-nav {
+      background: var(--gold);
+      color: var(--navy) !important;
+      padding: 8px 20px !important;
+      border-radius: 8px;
+      font-weight: 600 !important;
+      font-size: 0.85rem !important;
+      text-decoration: none;
+      transition: var(--transition) !important;
+    }
+
+    .btn-nav:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
+    .btn-nav::after { display: none !important; }
+
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; background: none; border: none; padding: 4px;
+    }
+
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: rgba(255,255,255,0.8);
+      border-radius: 2px; transition: var(--transition);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%);
+      position: relative; overflow: hidden;
+      padding: 120px 2rem 100px;
+      text-align: center;
+    }
+
+    .hero-bg-pattern {
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(212,175,55,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(212,175,55,0.06) 0%, transparent 40%),
+        radial-gradient(circle at 60% 80%, rgba(212,175,55,0.04) 0%, transparent 40%);
+      pointer-events: none;
+    }
+
+    .hero-books-bg {
+      position: absolute; inset: 0;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .hero-inner {
+      position: relative; z-index: 2;
+      max-width: 820px; margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(212,175,55,0.15);
+      border: 1px solid rgba(212,175,55,0.3);
+      color: var(--gold);
+      padding: 6px 18px; border-radius: 50px;
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; margin-bottom: 2rem;
+      animation: fadeInDown 0.8s ease both;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 0.9s ease 0.1s both;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 580px;
+      margin: 0 auto 2.5rem;
+      font-weight: 300;
+      line-height: 1.8;
+      animation: fadeInUp 0.9s ease 0.2s both;
+    }
+
+    .hero-ctas {
+      display: flex; align-items: center; justify-content: center;
+      gap: 1rem; flex-wrap: wrap;
+      animation: fadeInUp 0.9s ease 0.3s both;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--navy);
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: none; cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex; align-items: center; gap: 8px;
+      letter-spacing: 0.02em;
+      box-shadow: 0 4px 20px rgba(212,175,55,0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(212,175,55,0.4);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.3);
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex; align-items: center; gap: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .hero-stats {
+      display: flex; justify-content: center; gap: 3rem;
+      margin-top: 4rem;
+      animation: fadeInUp 0.9s ease 0.4s both;
+    }
+
+    .hero-stat { text-align: center; }
+
+    .hero-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 700;
+      color: var(--gold);
+      display: block;
+    }
+
+    .hero-stat-label {
+      font-size: 0.8rem; color: rgba(255,255,255,0.5);
+      text-transform: uppercase; letter-spacing: 0.1em;
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 90px 2rem; }
+    .section-inner { max-width: 1280px; margin: 0 auto; }
+
+    .section-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--gold);
+      font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-label::before {
+      content: ''; display: block;
+      width: 24px; height: 2px; background: var(--gold);
+    }
+
+    h2.section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      color: var(--gray-text);
+      font-size: 1.05rem;
+      max-width: 560px;
+      margin-top: 0.75rem;
+      font-weight: 300;
+    }
+
+    /* ── CATEGORIES ── */
+    .categories-section { background: var(--gray); }
+
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.25rem;
+      margin-top: 3rem;
+    }
+
+    .category-card {
+      background: var(--white);
+      border: 1px solid var(--gray-mid);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.5rem;
+      text-decoration: none;
+      transition: var(--transition);
+      position: relative; overflow: hidden;
+      cursor: pointer;
+    }
+
+    .category-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.3s;
+    }
+
+    .category-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--gold); }
+    .category-card:hover::before { transform: scaleX(1); }
+
+    .category-icon {
+      font-size: 2rem; margin-bottom: 1rem; display: block;
+    }
+
+    .category-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem; font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .category-count {
+      font-size: 0.8rem; color: var(--gray-text);
+    }
+
+    /* ── BOOK CARDS ── */
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem; margin-top: 3rem;
+    }
+
+    .book-card {
+      background: var(--white);
+      border: 1px solid var(--gray-mid);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .book-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+
+    .book-card-cover {
+      width: 100%; height: 220px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s;
+    }
+
+    .book-card:hover .book-card-cover { transform: scale(1.03); }
+
+    .book-card-cover-wrap {
+      overflow: hidden; position: relative;
+    }
+
+    .book-card-badge {
+      position: absolute; top: 12px; left: 12px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 50px;
+    }
+
+    .book-card-body { padding: 1.5rem; }
+
+    .book-card-category {
+      font-size: 0.75rem; font-weight: 600;
+      color: var(--gold); letter-spacing: 0.1em;
+      text-transform: uppercase; margin-bottom: 0.5rem;
+    }
+
+    .book-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-weight: 700;
+      color: var(--text-dark); margin-bottom: 0.25rem;
+      line-height: 1.3;
+    }
+
+    .book-card-author {
+      font-size: 0.85rem; color: var(--gray-text);
+      margin-bottom: 0.75rem; font-style: italic;
+    }
+
+    .book-card-summary {
+      font-size: 0.88rem; color: var(--text-body);
+      line-height: 1.7; margin-bottom: 1.25rem;
+    }
+
+    .book-card-footer {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+
+    .book-card-stars {
+      color: var(--gold); font-size: 0.85rem; letter-spacing: 1px;
+    }
+
+    .btn-book {
+      background: var(--navy);
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 0.82rem; font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+
+    [data-theme="dark"] .btn-book { background: var(--gold); color: var(--navy); }
+
+    .btn-book:hover { background: var(--gold); color: var(--navy); transform: translateY(-1px); }
+
+    /* ── FEATURED QUOTE ── */
+    .quote-section {
+      background: linear-gradient(135deg, #0F172A, #1E293B);
+      text-align: center; position: relative; overflow: hidden;
+    }
+
+    .quote-section::before {
+      content: '"';
+      position: absolute; top: -40px; left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Playfair Display', serif;
+      font-size: 20rem; color: rgba(212,175,55,0.05);
+      line-height: 1; pointer-events: none;
+    }
+
+    .quote-text {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      color: #fff;
+      font-style: italic;
+      line-height: 1.5;
+      max-width: 760px;
+      margin: 0 auto 1.5rem;
+      position: relative; z-index: 2;
+    }
+
+    .quote-author {
+      color: var(--gold);
+      font-size: 0.9rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      position: relative; z-index: 2;
+    }
+
+    /* ── ABOUT STRIP ── */
+    .about-strip {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: center;
+    }
+
+    .about-image-wrap {
+      position: relative;
+    }
+
+    .about-image {
+      width: 100%; border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      display: block;
+    }
+
+    .about-accent {
+      position: absolute; bottom: -20px; right: -20px;
+      width: 140px; height: 140px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      border-radius: var(--radius-lg);
+      z-index: -1;
+      opacity: 0.4;
+    }
+
+    .about-content { }
+
+    .about-content p {
+      color: var(--text-body);
+      font-size: 1rem; line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+
+    .about-values {
+      display: flex; flex-direction: column; gap: 1rem;
+      margin: 1.75rem 0;
+    }
+
+    .about-value {
+      display: flex; gap: 1rem; align-items: flex-start;
+    }
+
+    .about-value-icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: var(--gold-dim);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
+    }
+
+    .about-value-text strong {
+      display: block; font-size: 0.9rem;
+      color: var(--text-dark); margin-bottom: 2px;
+    }
+
+    .about-value-text span {
+      font-size: 0.83rem; color: var(--gray-text);
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-section { background: var(--gray); }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem; margin-top: 3rem;
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      border: 1px solid var(--gray-mid);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .testimonial-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+    .testimonial-quote {
+      font-size: 2rem; color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .testimonial-text {
+      font-size: 0.95rem; color: var(--text-body);
+      line-height: 1.8; margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+
+    .testimonial-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; color: var(--navy); font-size: 0.9rem;
+    }
+
+    .testimonial-name {
+      font-weight: 600; font-size: 0.9rem; color: var(--text-dark);
+    }
+
+    .testimonial-role {
+      font-size: 0.78rem; color: var(--gray-text);
+    }
+
+    /* ── NEWSLETTER ── */
+    .newsletter-section {
+      background: linear-gradient(135deg, #0F172A, #1E293B);
+      text-align: center; position: relative; overflow: hidden;
+    }
+
+    .newsletter-section::after {
+      content: '';
+      position: absolute; bottom: -100px; right: -100px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.08), transparent 70%);
+      pointer-events: none;
+    }
+
+    .newsletter-section h2 { color: #fff; }
+    .newsletter-section .section-subtitle { color: rgba(255,255,255,0.6); margin: 0 auto; }
+
+    .newsletter-form {
+      display: flex; gap: 0; max-width: 480px; margin: 2.5rem auto 0;
+      border-radius: 12px; overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+
+    .newsletter-input {
+      flex: 1; background: rgba(255,255,255,0.95);
+      border: none; padding: 16px 20px;
+      font-family: 'Inter', sans-serif; font-size: 0.95rem;
+      outline: none; color: var(--text-dark);
+    }
+
+    .newsletter-btn {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--navy); border: none; padding: 16px 28px;
+      font-weight: 700; font-size: 0.9rem; cursor: pointer;
+      transition: var(--transition); letter-spacing: 0.02em;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .newsletter-btn:hover { background: var(--gold-light); transform: none; }
+
+    .newsletter-privacy {
+      margin-top: 1rem; font-size: 0.78rem;
+      color: rgba(255,255,255,0.4); position: relative; z-index: 2;
+    }
+
+    /* ── BLOG SECTION ── */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem; margin-top: 3rem;
+    }
+
+    .blog-card {
+      background: var(--white);
+      border: 1px solid var(--gray-mid);
+      border-radius: var(--radius-lg);
+      overflow: hidden; transition: var(--transition);
+      text-decoration: none; display: block; color: inherit;
+    }
+
+    .blog-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+
+    .blog-card-img {
+      width: 100%; height: 190px; object-fit: cover;
+      display: block; transition: transform 0.4s;
+    }
+
+    .blog-card:hover .blog-card-img { transform: scale(1.04); }
+    .blog-card-img-wrap { overflow: hidden; }
+
+    .blog-card-body { padding: 1.5rem; }
+
+    .blog-card-tag {
+      font-size: 0.72rem; font-weight: 700;
+      color: var(--gold); letter-spacing: 0.12em;
+      text-transform: uppercase; margin-bottom: 0.6rem;
+    }
+
+    .blog-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem; font-weight: 700;
+      color: var(--text-dark); line-height: 1.35;
+      margin-bottom: 0.6rem;
+    }
+
+    .blog-card-excerpt {
+      font-size: 0.87rem; color: var(--gray-text);
+      line-height: 1.7;
+    }
+
+    .blog-card-meta {
+      display: flex; align-items: center; gap: 0.5rem;
+      margin-top: 1.25rem; font-size: 0.78rem; color: var(--gray-text);
+    }
+
+    /* ── CONTACT ── */
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1.5fr;
+      gap: 4rem; margin-top: 3rem;
+    }
+
+    .contact-info { }
+
+    .contact-info-item {
+      display: flex; gap: 1rem; margin-bottom: 1.75rem;
+      align-items: flex-start;
+    }
+
+    .contact-info-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: var(--gold-dim);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
+    }
+
+    .contact-info-label {
+      font-weight: 600; font-size: 0.9rem;
+      color: var(--text-dark); margin-bottom: 2px;
+    }
+
+    .contact-info-value {
+      font-size: 0.88rem; color: var(--gray-text);
+    }
+
+    .contact-form { background: var(--gray); border-radius: var(--radius-lg); padding: 2.5rem; }
+
+    .form-group { margin-bottom: 1.5rem; }
+
+    .form-group label {
+      display: block; font-size: 0.85rem;
+      font-weight: 600; color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%; background: var(--white);
+      border: 1px solid var(--gray-mid);
+      border-radius: 8px; padding: 12px 16px;
+      font-family: 'Inter', sans-serif; font-size: 0.9rem;
+      color: var(--text-dark); outline: none;
+      transition: var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(212,175,55,0.1);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #070E1A;
+      padding: 4rem 2rem 2rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .footer-inner {
+      max-width: 1280px; margin: 0 auto;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem; margin-bottom: 3rem;
+    }
+
+    .footer-brand-logo {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand-logo-icon {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+    }
+
+    .footer-brand-logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; font-weight: 700;
+      color: #fff;
+    }
+
+    .footer-brand-desc {
+      font-size: 0.85rem; line-height: 1.8;
+      color: rgba(255,255,255,0.45); max-width: 280px;
+    }
+
+    .footer-socials {
+      display: flex; gap: 0.75rem; margin-top: 1.5rem;
+    }
+
+    .footer-social {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.5); font-size: 0.85rem;
+      text-decoration: none; transition: var(--transition);
+    }
+
+    .footer-social:hover {
+      background: rgba(212,175,55,0.15);
+      border-color: var(--gold); color: var(--gold);
+    }
+
+    .footer-col h4 {
+      font-family: 'Playfair Display', serif;
+      color: #fff; font-size: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-col ul { list-style: none; }
+
+    .footer-col ul li { margin-bottom: 0.6rem; }
+
+    .footer-col ul li a {
+      color: rgba(255,255,255,0.45);
+      text-decoration: none; font-size: 0.85rem;
+      transition: var(--transition);
+    }
+
+    .footer-col ul li a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 0.82rem; flex-wrap: wrap; gap: 0.75rem;
+    }
+
+    .footer-bottom a { color: var(--gold); text-decoration: none; }
+
+    /* ── PAGE SECTIONS (SPA routing) ── */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* ── BOOK DETAIL PAGE ── */
+    .book-detail-hero {
+      background: linear-gradient(135deg, #0F172A, #1E293B);
+      padding: 80px 2rem 60px;
+    }
+
+    .book-detail-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 260px 1fr;
+      gap: 3.5rem; align-items: start;
+    }
+
+    .book-detail-cover {
+      width: 100%; border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      display: block;
+    }
+
+    .book-detail-meta { }
+
+    .book-detail-category {
+      font-size: 0.75rem; font-weight: 700;
+      color: var(--gold); letter-spacing: 0.15em;
+      text-transform: uppercase; margin-bottom: 0.75rem;
+    }
+
+    .book-detail-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 900; color: #fff;
+      line-height: 1.15; margin-bottom: 0.5rem;
+    }
+
+    .book-detail-author {
+      font-size: 1rem; color: rgba(255,255,255,0.6);
+      font-style: italic; margin-bottom: 1.5rem;
+    }
+
+    .book-detail-summary {
+      font-size: 1rem; color: rgba(255,255,255,0.75);
+      line-height: 1.9; margin-bottom: 2rem;
+    }
+
+    .book-detail-buy {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--navy); padding: 14px 32px;
+      border-radius: 10px; font-weight: 700;
+      text-decoration: none; font-size: 0.95rem;
+      transition: var(--transition);
+      box-shadow: 0 4px 20px rgba(212,175,55,0.3);
+    }
+
+    .book-detail-buy:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212,175,55,0.5); }
+
+    .book-detail-body {
+      max-width: 900px; margin: 0 auto; padding: 60px 2rem;
+    }
+
+    .book-section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; font-weight: 700;
+      color: var(--text-dark); margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--gold-dim);
+    }
+
+    .key-lessons { list-style: none; margin-bottom: 2.5rem; }
+
+    .key-lessons li {
+      display: flex; gap: 0.75rem;
+      align-items: flex-start;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--gray-mid);
+      font-size: 0.95rem; color: var(--text-body); line-height: 1.7;
+    }
+
+    .key-lessons li::before {
+      content: '◆';
+      color: var(--gold); font-size: 0.6rem;
+      flex-shrink: 0; margin-top: 0.5rem;
+    }
+
+    /* ── CATEGORIES PAGE ── */
+    .categories-page-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.5rem; margin-top: 3rem;
+    }
+
+    .cat-page-card {
+      background: var(--white);
+      border: 1px solid var(--gray-mid);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .cat-page-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--gold); }
+
+    .cat-page-icon {
+      font-size: 3rem; margin-bottom: 1rem;
+    }
+
+    .cat-page-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-weight: 700;
+      color: var(--text-dark); margin-bottom: 0.4rem;
+    }
+
+    .cat-page-desc {
+      font-size: 0.83rem; color: var(--gray-text); line-height: 1.6;
+    }
+
+    /* ── BLOG PAGE ── */
+    .blog-page-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem; margin-top: 3rem;
+    }
+
+    .blog-sidebar { }
+
+    .sidebar-widget {
+      background: var(--gray);
+      border-radius: var(--radius);
+      padding: 1.75rem; margin-bottom: 2rem;
+    }
+
+    .sidebar-widget h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; font-weight: 700;
+      color: var(--text-dark); margin-bottom: 1.25rem;
+    }
+
+    .sidebar-tag {
+      display: inline-block;
+      background: var(--gray-mid);
+      color: var(--text-body);
+      padding: 5px 12px; border-radius: 50px;
+      font-size: 0.78rem; font-weight: 500;
+      margin: 0 4px 8px 0; cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .sidebar-tag:hover { background: var(--gold-dim); color: var(--gold); }
+
+    /* ── NEWSLETTER PAGE ── */
+    .newsletter-page {
+      max-width: 600px; margin: 0 auto;
+      text-align: center;
+    }
+
+    .benefits-list {
+      list-style: none; text-align: left;
+      margin: 2rem 0;
+    }
+
+    .benefits-list li {
+      display: flex; gap: 0.75rem; align-items: flex-start;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--gray-mid);
+      font-size: 0.95rem;
+    }
+
+    .benefits-list li::before {
+      content: '✓';
+      color: var(--gold); font-weight: 700; flex-shrink: 0;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ── TOAST ── */
+    .toast {
+      position: fixed; bottom: 2rem; right: 2rem;
+      background: var(--navy-mid);
+      color: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      border-left: 4px solid var(--gold);
+      box-shadow: var(--shadow-lg);
+      font-size: 0.9rem;
+      transform: translateX(200%);
+      transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+      z-index: 9999; max-width: 320px;
+    }
+
+    .toast.show { transform: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links, .nav-search { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: fixed; top: 70px; left: 0; right: 0;
+        background: #0F172A;
+        padding: 1.5rem 2rem 2rem;
+        border-bottom: 1px solid rgba(212,175,55,0.15);
+        gap: 1.25rem; z-index: 999;
+      }
+      .hero h1 { font-size: 2.2rem; }
+      .hero-stats { gap: 1.5rem; }
+      .about-strip { grid-template-columns: 1fr; gap: 2rem; }
+      .about-accent { display: none; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .book-detail-inner { grid-template-columns: 1fr; }
+      .book-detail-cover { max-width: 220px; }
+      .blog-page-grid { grid-template-columns: 1fr; }
+      .categories-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      section { padding: 60px 1rem; }
+      .footer-top { grid-template-columns: 1fr; }
+      .hero-stats { flex-direction: column; gap: 1rem; }
+    }
+
+    /* ── MISC UTILS ── */
+    .text-center { text-align: center; }
+    .mt-1 { margin-top: 0.5rem; }
+    .mt-2 { margin-top: 1rem; }
+    .mt-3 { margin-top: 1.5rem; }
+    .gold { color: var(--gold); }
+    .divider { height: 1px; background: var(--gray-mid); margin: 2rem 0; }
+    .flex-center { display: flex; align-items: center; justify-content: center; }
+    .page-hero-bg {
+      background: linear-gradient(135deg, #0F172A, #1E293B);
+      padding: 70px 2rem 50px; text-align: center;
+    }
+    .page-hero-bg h1 {
+      font-family: 'Playfair Display', serif;
+      color: #fff; font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 900;
+    }
+    .page-hero-bg p {
+      color: rgba(255,255,255,0.6); max-width: 520px; margin: 0.75rem auto 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Reading Progress Bar -->
+<div id="progress-bar"></div>
+
+<!-- Toast Notification -->
+<div class="toast" id="toast"></div>
+
+<!-- ═══════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════ -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#" onclick="showPage('home')">
+      <div class="nav-logo-icon">📖</div>
+      <span class="nav-logo-text">The Reading Compass</span>
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#" onclick="showPage('home')">Home</a></li>
+      <li><a href="#" onclick="showPage('books')">Books</a></li>
+      <li><a href="#" onclick="showPage('categories')">Categories</a></li>
+      <li><a href="#" onclick="showPage('blog')">Blog</a></li>
+      <li><a href="#" onclick="showPage('about')">About</a></li>
+      <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+      <li><a href="#" class="btn-nav" onclick="showPage('newsletter')">Join Newsletter</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <div class="nav-search">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="text" placeholder="Search books..." id="search-input" oninput="handleSearch(this.value)" />
+      </div>
+
+      <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" id="theme-icon">
+          <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+      </button>
+
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════
+     HOME PAGE
+══════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-books-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-badge">✦ Curated for Lifelong Learners</div>
+      <h1>Discover Books That <em>Transform</em> Your Thinking</h1>
+      <p class="hero-sub">Handpicked books on philosophy, psychology, meaning, wealth, biographies, and timeless wisdom — each one chosen to expand your perspective and deepen your understanding of life.</p>
+      <div class="hero-ctas">
+        <a href="#" class="btn-primary" onclick="showPage('books')">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          Explore Books
+        </a>
+        <a href="#" class="btn-secondary" onclick="showPage('newsletter')">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Join the Newsletter
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">120+</span>
+          <span class="hero-stat-label">Books Curated</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">9</span>
+          <span class="hero-stat-label">Categories</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">5K+</span>
+          <span class="hero-stat-label">Readers</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories-section">
+    <div class="section-inner">
+      <div class="section-label">Browse By Category</div>
+      <h2 class="section-title">Find Your Next Great Read</h2>
+      <p class="section-subtitle">From timeless philosophy to modern psychology — explore books that have shaped the minds of generations.</p>
+
+      <div class="categories-grid reveal">
+        <div class="category-card" onclick="showPage('categories')">
+          <span class="category-icon">🌟</span>
+          <div class="category-name">Purpose & Meaning</div>
+          <div class="category-count">14 books</div>
+        </div>
+        <div class="category-card" onclick="showPage('categories')">
+          <span class="category-icon">🏛️</span>
+          <div class="category-name">Philosophy</div>
+          <div class="category-count">22 books</div>
+        </div>
+        <div class="category-card" onclick="showPage('categories')">
+          <span class="category-icon">🧠</span>
+          <div class="category-name">Psychology</div>
+          <div class="category-count">18 books</div>
+        </div>
+        <div class="category-card" onclick="showPage('categories')">
+          <span class="category-icon">🚀</span>
+          <div class="category-name">Self-Development</div>
+          <div class="category-count">25 books</div>
+        </div>
+        <div class="category-card" onclick="showPage('categories')">
+          <span class="category-icon">💰</span>
+          <div class="category-name">Wealth & Investing</div>
+          <div class="category-count">12 books</div>
+        </div>
+        <div class="category-card" onclick="showPage('categories')">
+          <span class="category-icon">📜</span>
+          <div class="category-name">Biographies</div>
+          <div class="category-count">16 books</div>
+        </div>
+        <div class="category-card" onclick="showPage('categories')">
+          <span class="category-icon">📚</span>
+          <div class="category-name">Fiction & Novels</div>
+          <div class="category-count">19 books</div>
+        </div>
+        <div class="category-card" onclick="showPage('categories')">
+          <span class="category-icon">🕊️</span>
+          <div class="category-name">Spirituality</div>
+          <div class="category-count">11 books</div>
+        </div>
+        <div class="category-card" onclick="showPage('categories')">
+          <span class="category-icon">🏺</span>
+          <div class="category-name">History</div>
+          <div class="category-count">17 books</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Books -->
+  <section>
+    <div class="section-inner">
+      <div class="section-label">Featured Picks</div>
+      <h2 class="section-title">Books That Will Change Your Life</h2>
+      <p class="section-subtitle">Carefully selected titles that have transformed the thinking of millions — and could transform yours.</p>
+
+      <div class="books-grid reveal">
+        <!-- Book 1 -->
+        <div class="book-card">
+          <div class="book-card-cover-wrap">
+            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=220&fit=crop&crop=center" alt="Man's Search for Meaning" class="book-card-cover" />
+            <span class="book-card-badge">Must Read</span>
+          </div>
+          <div class="book-card-body">
+            <div class="book-card-category">Purpose & Meaning</div>
+            <div class="book-card-title">Man's Search for Meaning</div>
+            <div class="book-card-author">Viktor E. Frankl</div>
+            <p class="book-card-summary">A psychiatrist's profound account of surviving the Holocaust and the discovery that meaning — not pleasure — is the deepest human motivation. A book that will permanently shift how you face suffering.</p>
+            <div class="book-card-footer">
+              <div class="book-card-stars">★★★★★</div>
+              <a href="#" class="btn-book" onclick="showPage('book-detail')">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="book-card">
+          <div class="book-card-cover-wrap">
+            <img src="https://images.unsplash.com/photo-1588058365548-9ded1f2a3b1e?w=400&h=220&fit=crop&crop=center" alt="Meditations" class="book-card-cover" />
+            <span class="book-card-badge">Timeless</span>
+          </div>
+          <div class="book-card-body">
+            <div class="book-card-category">Philosophy</div>
+            <div class="book-card-title">Meditations</div>
+            <div class="book-card-author">Marcus Aurelius</div>
+            <p class="book-card-summary">The private journal of a Roman emperor, written to himself as a daily practice of stoic philosophy. Two millennia later, it remains the most direct guide to living with virtue, discipline, and inner peace.</p>
+            <div class="book-card-footer">
+              <div class="book-card-stars">★★★★★</div>
+              <a href="#" class="btn-book" onclick="showPage('book-detail')">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="book-card">
+          <div class="book-card-cover-wrap">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=220&fit=crop&crop=center" alt="The Intelligent Investor" class="book-card-cover" />
+            <span class="book-card-badge">Wealth</span>
+          </div>
+          <div class="book-card-body">
+            <div class="book-card-category">Wealth & Investing</div>
+            <div class="book-card-title">The Intelligent Investor</div>
+            <div class="book-card-author">Benjamin Graham</div>
+            <p class="book-card-summary">Warren Buffett called it "the best book about investing ever written." Graham's timeless principles of value investing protect you from your own emotions and the market's irrationality.</p>
+            <div class="book-card-footer">
+              <div class="book-card-stars">★★★★★</div>
+              <a href="#" class="btn-book" onclick="showPage('book-detail')">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 4 -->
+        <div class="book-card">
+          <div class="book-card-cover-wrap">
+            <img src="https://images.unsplash.com/photo-1476234251651-f353703a034d?w=400&h=220&fit=crop&crop=center" alt="Walden" class="book-card-cover" />
+          </div>
+          <div class="book-card-body">
+            <div class="book-card-category">Philosophy</div>
+            <div class="book-card-title">Walden</div>
+            <div class="book-card-author">Henry David Thoreau</div>
+            <p class="book-card-summary">Thoreau's two-year experiment in deliberate living beside Walden Pond is an invitation to simplify, to question what society demands of us, and to live deeply rather than frantically.</p>
+            <div class="book-card-footer">
+              <div class="book-card-stars">★★★★☆</div>
+              <a href="#" class="btn-book" onclick="showPage('book-detail')">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 5 -->
+        <div class="book-card">
+          <div class="book-card-cover-wrap">
+            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=400&h=220&fit=crop&crop=center" alt="The Broken Wings" class="book-card-cover" />
+          </div>
+          <div class="book-card-body">
+            <div class="book-card-category">Fiction & Novels</div>
+            <div class="book-card-title">The Broken Wings</div>
+            <div class="book-card-author">Kahlil Gibran</div>
+            <p class="book-card-summary">A poetic masterpiece about love, loss, and spiritual longing. Gibran writes with a beauty that pierces the heart — this is a book you feel as much as you read.</p>
+            <div class="book-card-footer">
+              <div class="book-card-stars">★★★★★</div>
+              <a href="#" class="btn-book" onclick="showPage('book-detail')">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 6 -->
+        <div class="book-card">
+          <div class="book-card-cover-wrap">
+            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&h=220&fit=crop&crop=center" alt="The Frontier Gandhi" class="book-card-cover" />
+            <span class="book-card-badge">Biography</span>
+          </div>
+          <div class="book-card-body">
+            <div class="book-card-category">Biographies & Memoirs</div>
+            <div class="book-card-title">The Frontier Gandhi: My Life and Struggle</div>
+            <div class="book-card-author">Khan Abdul Ghaffar Khan</div>
+            <p class="book-card-summary">The autobiography of one of history's most extraordinary men — a Pashtun Muslim who built a nonviolent army of 100,000. A testament to courage, faith, and the power of conscience over power.</p>
+            <div class="book-card-footer">
+              <div class="book-card-stars">★★★★★</div>
+              <a href="#" class="btn-book" onclick="showPage('book-detail')">Read More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-3">
+        <a href="#" class="btn-primary" onclick="showPage('books')" style="display:inline-flex;">View All Books →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="quote-section">
+    <div class="section-inner">
+      <blockquote class="quote-text">"A reader lives a thousand lives before he dies. The man who never reads lives only one."</blockquote>
+      <p class="quote-author">— George R.R. Martin</p>
+    </div>
+  </section>
+
+  <!-- About Strip -->
+  <section>
+    <div class="section-inner">
+      <div class="about-strip">
+        <div class="about-image-wrap">
+          <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=700&fit=crop" alt="Reading books" class="about-image" />
+          <div class="about-accent"></div>
+        </div>
+        <div class="about-content reveal">
+          <div class="section-label">About The Reading Compass</div>
+          <h2 class="section-title">Every Recommendation is a Conversation</h2>
+          <p>I am a passionate reader who believes that books have the power to fundamentally transform a life. Reading is not a pastime for me — it is how I understand the world, find direction, and grow into a better version of myself.</p>
+          <p>Every book on this site has been personally read, absorbed, and chosen because it changed something in how I think or how I live. I write each summary as a recommendation from one reader to another — warm, honest, and human.</p>
+
+          <div class="about-values">
+            <div class="about-value">
+              <div class="about-value-icon">🎯</div>
+              <div class="about-value-text">
+                <strong>Handpicked with Purpose</strong>
+                <span>No algorithm, no sponsored placements — only books that genuinely matter.</span>
+              </div>
+            </div>
+            <div class="about-value">
+              <div class="about-value-icon">✍️</div>
+              <div class="about-value-text">
+                <strong>Human-Written Summaries</strong>
+                <span>Every review is written from genuine reading experience, not a publisher blurb.</span>
+              </div>
+            </div>
+            <div class="about-value">
+              <div class="about-value-icon">🧭</div>
+              <div class="about-value-text">
+                <strong>A Compass, Not a List</strong>
+                <span>I help you find the right book for where you are in life right now.</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="btn-primary" onclick="showPage('about')">Read My Story →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="section-inner">
+      <div class="section-label">Reader Stories</div>
+      <h2 class="section-title text-center">What Readers Are Saying</h2>
+
+      <div class="testimonials-grid reveal">
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">Man's Search for Meaning, recommended here, came to me at the lowest point in my life. I read it in two days and something shifted in me permanently. I am so grateful for this curation.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AH</div>
+            <div>
+              <div class="testimonial-name">Ahmed H.</div>
+              <div class="testimonial-role">Teacher, Lahore</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">I never thought I was a "philosophy person" until I found Meditations here. The way it was described made me pick it up. Now I re-read it every year. Best discovery of my reading life.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SN</div>
+            <div>
+              <div class="testimonial-name">Sara N.</div>
+              <div class="testimonial-role">University Student, Karachi</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">The Intelligent Investor changed how I think about money and patience. The Reading Compass doesn't just list books — it tells you why a book matters for your life. That's rare and valuable.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MR</div>
+            <div>
+              <div class="testimonial-name">Muhammad R.</div>
+              <div class="testimonial-role">Entrepreneur, Islamabad</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter-section">
+    <div class="section-inner" style="position:relative;z-index:2;">
+      <div class="section-label" style="justify-content:center;color:var(--gold);">Stay in the Loop</div>
+      <h2 class="section-title">Join 5,000+ Thoughtful Readers</h2>
+      <p class="section-subtitle">Get weekly book recommendations, reading guides, and ideas that challenge the way you think — delivered to your inbox.</p>
+
+      <div class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Your email address..." id="home-email" />
+        <button class="newsletter-btn" onclick="subscribeNewsletter()">Subscribe →</button>
+      </div>
+      <p class="newsletter-privacy">📖 One email per week. No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <!-- Blog Preview -->
+  <section>
+    <div class="section-inner">
+      <div class="section-label">Reading Guides & Essays</div>
+      <h2 class="section-title">From the Blog</h2>
+      <p class="section-subtitle">Deep dives into books, ideas, and the art of reading intentionally.</p>
+
+      <div class="blog-grid reveal">
+        <a href="#" class="blog-card" onclick="showPage('blog')">
+          <div class="blog-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=190&fit=crop" alt="Best books 2026" class="blog-card-img" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-tag">Reading Guide</div>
+            <div class="blog-card-title">The 15 Best Books to Read in 2026 (That Will Actually Change You)</div>
+            <div class="blog-card-excerpt">Not the bestseller list. Not what's trending. These are the books that readers come back to years later and say: this one was different.</div>
+            <div class="blog-card-meta">
+              <span>📅 May 2026</span> · <span>8 min read</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="blog-card" onclick="showPage('blog')">
+          <div class="blog-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1519682577862-22b62b24e493?w=400&h=190&fit=crop" alt="Philosophy books" class="blog-card-img" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-tag">Philosophy</div>
+            <div class="blog-card-title">5 Philosophy Books That Will Make You Question Everything You Know</div>
+            <div class="blog-card-excerpt">Philosophy isn't an academic exercise — it's a survival tool. These five books will permanently alter the lens through which you see the world.</div>
+            <div class="blog-card-meta">
+              <span>📅 April 2026</span> · <span>6 min read</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="blog-card" onclick="showPage('blog')">
+          <div class="blog-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400&h=190&fit=crop" alt="Purpose books" class="blog-card-img" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-tag">Purpose & Meaning</div>
+            <div class="blog-card-title">Books About Purpose and Meaning: A Reading Path for the Lost and Searching</div>
+            <div class="blog-card-excerpt">If you're going through a period where nothing feels clear, these books won't give you all the answers — but they will make the search feel worthwhile.</div>
+            <div class="blog-card-meta">
+              <span>📅 March 2026</span> · <span>7 min read</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="text-center mt-3">
+        <a href="#" class="btn-primary" onclick="showPage('blog')" style="display:inline-flex;">Read All Articles →</a>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-home -->
+
+
+<!-- ═══════════════════════════════════════
+     BOOK DETAIL PAGE
+══════════════════════════════════════════ -->
+<div class="page" id="page-book-detail">
+  <div class="book-detail-hero">
+    <div class="book-detail-inner" style="max-width:1100px;margin:0 auto;padding:0 2rem;">
+      <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300&h=420&fit=crop" alt="Man's Search for Meaning" class="book-detail-cover" />
+      <div class="book-detail-meta">
+        <div class="book-detail-category">Purpose & Meaning · Viktor E. Frankl</div>
+        <h1 class="book-detail-title">Man's Search for Meaning</h1>
+        <div class="book-detail-author">by Viktor E. Frankl</div>
+        <p class="book-detail-summary">Written in nine days from memory, this slim masterpiece chronicles Frankl's survival through four Nazi concentration camps — including Auschwitz — and the psychological observations that led him to develop logotherapy. It is not a book about despair. It is a book about the indestructible human capacity to find meaning even in the most unbearable circumstances. Reading it does not just educate you. It transforms you.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="https://www.amazon.com/dp/0807014273" target="_blank" class="book-detail-buy">
+            🛒 Get This Book →
+          </a>
+          <div class="book-card-stars" style="font-size:1.2rem;display:flex;align-items:center;">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-detail-body">
+
+    <h3 class="book-section-title">Why You Should Read This Book</h3>
+    <p style="margin-bottom:2rem;color:var(--text-body);line-height:1.9;">If you have ever faced a period of suffering that felt meaningless — grief, failure, illness, isolation — this book speaks directly to that experience. Frankl demonstrates, through lived testimony that no philosopher could fabricate, that meaning is not something we find passively. It is something we choose, in every moment, regardless of circumstances. This book is armor for the soul.</p>
+
+    <h3 class="book-section-title">Key Lessons</h3>
+    <ul class="key-lessons">
+      <li>We cannot always choose our circumstances, but we always choose our response to them.</li>
+      <li>Meaning — not pleasure or power — is the primary human motivator. When meaning collapses, so does the will to live.</li>
+      <li>Suffering itself is not meaningless. The way we bear our suffering defines who we become.</li>
+      <li>Love is the highest goal a human being can aspire to. Even the thought of a loved one can sustain life.</li>
+      <li>Freedom is inseparable from responsibility. True freedom is the freedom to choose one's attitude.</li>
+    </ul>
+
+    <h3 class="book-section-title">Who This Book Is For</h3>
+    <p style="margin-bottom:2.5rem;color:var(--text-body);line-height:1.9;">This book is for anyone at a crossroads, anyone who is suffering and cannot see why, anyone who wants to understand what makes a human life meaningful beyond comfort and success. It is also essential reading for students of psychology, philosophy, and anyone interested in the resilience of the human spirit.</p>
+
+    <div style="text-align:center;padding:2.5rem;background:var(--gray);border-radius:var(--radius-lg);margin-bottom:3rem;">
+      <p style="font-family:'Playfair Display',serif;font-size:1.2rem;font-style:italic;color:var(--text-dark);margin-bottom:1.5rem;">"When we are no longer able to change a situation, we are challenged to change ourselves."</p>
+      <p style="font-size:0.85rem;color:var(--gold);font-weight:600;">— Viktor E. Frankl</p>
+    </div>
+
+    <a href="https://www.amazon.com/dp/0807014273" target="_blank" class="btn-primary" style="display:inline-flex;margin-bottom:3rem;">🛒 Buy Now on Amazon →</a>
+
+    <h3 class="book-section-title">You Might Also Like</h3>
+    <div class="books-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr));">
+      <div class="book-card">
+        <div class="book-card-cover-wrap">
+          <img src="https://images.unsplash.com/photo-1588058365548-9ded1f2a3b1e?w=300&h=180&fit=crop" alt="Meditations" class="book-card-cover" style="height:160px;" />
+        </div>
+        <div class="book-card-body">
+          <div class="book-card-category">Philosophy</div>
+          <div class="book-card-title">Meditations</div>
+          <div class="book-card-author">Marcus Aurelius</div>
+          <a href="#" class="btn-book" style="display:inline-flex;margin-top:0.5rem;" onclick="scrollToTop()">Read More →</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <div class="book-card-cover-wrap">
+          <img src="https://images.unsplash.com/photo-1476234251651-f353703a034d?w=300&h=180&fit=crop" alt="Walden" class="book-card-cover" style="height:160px;" />
+        </div>
+        <div class="book-card-body">
+          <div class="book-card-category">Philosophy</div>
+          <div class="book-card-title">Walden</div>
+          <div class="book-card-author">Henry D. Thoreau</div>
+          <a href="#" class="btn-book" style="display:inline-flex;margin-top:0.5rem;" onclick="scrollToTop()">Read More →</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <div class="book-card-cover-wrap">
+          <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=300&h=180&fit=crop" alt="The Courage to Be" class="book-card-cover" style="height:160px;" />
+        </div>
+        <div class="book-card-body">
+          <div class="book-card-category">Philosophy</div>
+          <div class="book-card-title">The Courage to Be</div>
+          <div class="book-card-author">Paul Tillich</div>
+          <a href="#" class="btn-book" style="display:inline-flex;margin-top:0.5rem;" onclick="scrollToTop()">Read More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     ALL BOOKS PAGE
+══════════════════════════════════════════ -->
+<div class="page" id="page-books">
+  <div class="page-hero-bg">
+    <div class="section-label" style="justify-content:center;color:var(--gold);">The Collection</div>
+    <h1>All Book Recommendations</h1>
+    <p>Browse our complete library of handpicked titles across every category.</p>
+  </div>
+
+  <section>
+    <div class="section-inner">
+      <!-- Filter Bar -->
+      <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:2.5rem;">
+        <button class="sidebar-tag" style="background:var(--gold);color:var(--navy);" onclick="filterBooks('all',this)">All</button>
+        <button class="sidebar-tag" onclick="filterBooks('purpose',this)">Purpose & Meaning</button>
+        <button class="sidebar-tag" onclick="filterBooks('philosophy',this)">Philosophy</button>
+        <button class="sidebar-tag" onclick="filterBooks('psychology',this)">Psychology</button>
+        <button class="sidebar-tag" onclick="filterBooks('wealth',this)">Wealth</button>
+        <button class="sidebar-tag" onclick="filterBooks('biography',this)">Biography</button>
+        <button class="sidebar-tag" onclick="filterBooks('fiction',this)">Fiction</button>
+      </div>
+
+      <div class="books-grid" id="all-books-grid">
+        <div class="book-card" data-cat="purpose">
+          <div class="book-card-cover-wrap">
+            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=220&fit=crop" alt="Man's Search for Meaning" class="book-card-cover" />
+            <span class="book-card-badge">Must Read</span>
+          </div>
+          <div class="book-card-body">
+            <div class="book-card-category">Purpose & Meaning</div>
+            <div class="book-card-title">Man's Search for Meaning</div>
+            <div class="book-card-author">Viktor E. Frankl</div>
+            <p class="book-card-summary">The definitive book on finding meaning in suffering. Read it and you will never see hardship the same way again.</p>
+            <div class="book-card-footer">
+              <div class="book-card-stars">★★★★★</div>
+              <a href="#" class="btn-book" onclick="showPage('book-detail')">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card" data-cat="philosophy">
+          <div class="book-card-cover-wrap">
+            <img src="https://images.unsplash.com/photo-1588058365548-9ded1f2a3b1e?w=400&h=220&fit=crop" alt="Meditations" class="book-card-cover" />
+            <span class="book-card-badge">Timeless</span>
+          </div>
+          <div class="book-card-body">
+            <div class="book-card-category">Philosophy</div>
+            <div class="book-card-title">Meditations</div>
+            <div class="book-card-author">Marcus Aurelius</div>
+            <p class="book-card-summary">Two thousand years old and more relevant than most self-help books published this year. A daily guide to stoic living.</p>
+            <div class="book-card-footer">
+              <div class="book-card-stars">★★★★★</div>
+              <a href="#" class="btn-book" onclick="showPage('book-detail')">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card" data-cat="philosophy">
+          <div class="book-card-cover-wrap">
+            <img src="https://images.unsplash.com/photo-1476234251651-f353703a034d?w=400&h=220&fit=crop" alt="Walden" class="book-card-cover" />
+          </div>
+          <div class="book-card-body">
+            <div class="book-card-category">Philosophy</div>
+            <div class="book-card-title">Walden</div>
+            <div class="book-card-author">Henry David Thoreau</div>
+            <p class="book-card-summary">Thoreau's experiment in deliberate living — an invitation to step back from the noise and ask what truly matters.</p>
+            <div class="book-card-footer">
+              <div class="book-card-stars">★★★★☆</div>
+              <a href="#" class="btn-book" onclick="showPage('book-detail')">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card" data-cat="philosophy">
+          <div class="book-card-cover-wrap">
+            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=400&h=220&fit=crop" alt="The Courage to Be" class="book-card-cover" />
+          </div>
+          <div class="book-card-body">
+            <div class="book-card-category">Philosophy</div>
+            <div class="book-card-title">The Courage to Be</div>
+            <div class="book-card-author">Paul Tillich</div>
+            <p class="book-card-summary">A profound exploration of anxiety, nonbeing, and the courage to affirm one's own existence in spite of everything.</p>
+            <div class="book-card-footer">
+              <div class="book-card-stars">★★★★★</div>
+              <a href="#" class="btn-book" onclick="showPage('book-detail')">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card" data-cat="philosophy">
+          <div class="book-card-cover-wrap">
+            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&h=220&fit=crop" alt="Fear and Trembling" class="book-card-cover" />
+          </div>
+          <div class="book-card-body">
+            <div class="book-card-category">Philosophy</div>
+            <div class="book-card-title">Fear and Trembling</div>
+            <div class="book-card-author">Søren Kierkegaard</div>
+            <p class="book-card-summary">Kierkegaard's meditation on faith, ethics, and the absolute — one of philosophy's most challenging and rewarding texts.</p>
+            <div class="book-card-footer">
+              <div class="book-card-stars">★★★★☆</div>
+              <a href="#" class="btn-book" onclick="showPage('book-detail')">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card" data-cat="wealth">
+          <div class="book-card-cover-wrap">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=220&fit=crop" alt="The Intelligent Investor" class="book-card-cover" />
+            <span class="book-card-badge">Wealth</span>
+          </div>
+          <div class="book-card-body">
+            <div class="book-card-category">Wealth & Investing</div>
+            <div class="book-card-title">The Intelligent Investor</div>
+            <div class="book-card-author">Benjamin Graham</div>
+            <p class="book-card-summary">The timeless bible of value investing. Graham's principles have protected and grown wealth for generations of investors.</p>
+            <div class="book-card-footer">
+              <div class="book-card-stars">★★★★★</div>
+              <a href="#" class="btn-book" onclick="showPage('book-detail')">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card" data-cat="wealth">
+          <div class="book-card-cover-wrap">
+            <img src="https://images.unsplash.com/photo-1519682577862-22b62b24e493?w=400&h=220&fit=crop" alt="The Millionaire Fastlane" class="book-card-cover" />
+          </div>
+          <div class="book-card-body">
+            <div class="book-card-category">Wealth & Investing</div>
+            <div class="book-card-title">The Millionaire Fastlane</div>
+            <div class="book-card-author">MJ DeMarco</div>
+            <p class="book-card-summary">A no-nonsense challenge to the conventional "get a job, save, and wait" approach to wealth. DeMarco argues for building value at speed.</p>
+            <div class="book-card-footer">
+              <div class="book-card-stars">★★★★☆</div>
+              <a href="#" class="btn-book" onclick="showPage('book-detail')">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card" data-cat="fiction">
+          <div class="book-card-cover-wrap">
+            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=220&fit=crop" alt="The Broken Wings" class="book-card-cover" />
+          </div>
+          <div class="book-card-body">
+            <div class="book-card-category">Fiction & Novels</div>
+            <div class="book-card-title">The Broken Wings</div>
+            <div class="book-card-author">Kahlil Gibran</div>
+            <p class="book-card-summary">A heartbreaking, beautiful story of love and loss, told in Gibran's signature poetic prose that reads like a prayer.</p>
+            <div class="book-card-footer">
+              <div class="book-card-stars">★★★★★</div>
+              <a href="#" class="btn-book" onclick="showPage('book-detail')">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card" data-cat="fiction">
+          <div class="book-card-cover-wrap">
+            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=220&fit=crop" alt="Behind Closed Doors" class="book-card-cover" />
+          </div>
+          <div class="book-card-body">
+            <div class="book-card-category">Fiction & Novels</div>
+            <div class="book-card-title">Behind Closed Doors</div>
+            <div class="book-card-author">B.A. Paris</div>
+            <p class="book-card-summary">A psychological thriller that peels back the perfect surface of a marriage to reveal something deeply disturbing. Impossible to put down.</p>
+            <div class="book-card-footer">
+              <div class="book-card-stars">★★★★☆</div>
+              <a href="#" class="btn-book" onclick="showPage('book-detail')">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card" data-cat="biography">
+          <div class="book-card-cover-wrap">
+            <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400&h=220&fit=crop" alt="The Frontier Gandhi" class="book-card-cover" />
+            <span class="book-card-badge">Biography</span>
+          </div>
+          <div class="book-card-body">
+            <div class="book-card-category">Biographies & Memoirs</div>
+            <div class="book-card-title">The Frontier Gandhi: My Life and Struggle</div>
+            <div class="book-card-author">Khan Abdul Ghaffar Khan</div>
+            <p class="book-card-summary">The autobiography of a man who built a nonviolent army of 100,000 Pashtuns. A story of faith, courage, and conscience that deserves far more readers.</p>
+            <div class="book-card-footer">
+              <div class="book-card-stars">★★★★★</div>
+              <a href="#" class="btn-book" onclick="showPage('book-detail')">Read More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════
+     CATEGORIES PAGE
+══════════════════════════════════════════ -->
+<div class="page" id="page-categories">
+  <div class="page-hero-bg">
+    <div class="section-label" style="justify-content:center;color:var(--gold);">Explore</div>
+    <h1>Book Categories</h1>
+    <p>Find books perfectly matched to what you're looking to understand, explore, or change.</p>
+  </div>
+
+  <section>
+    <div class="section-inner">
+      <div class="categories-page-grid">
+        <div class="cat-page-card" onclick="showPage('books')">
+          <div class="cat-page-icon">🌟</div>
+          <div class="cat-page-name">Purpose & Meaning</div>
+          <div class="cat-page-desc">Books for those searching for direction, significance, and a reason to keep going.</div>
+        </div>
+        <div class="cat-page-card" onclick="showPage('books')">
+          <div class="cat-page-icon">🏛️</div>
+          <div class="cat-page-name">Philosophy</div>
+          <div class="cat-page-desc">From the Stoics to Kierkegaard — ideas that have shaped how humanity understands existence.</div>
+        </div>
+        <div class="cat-page-card" onclick="showPage('books')">
+          <div class="cat-page-icon">🧠</div>
+          <div class="cat-page-name">Psychology</div>
+          <div class="cat-page-desc">Understand the mind, behavior, and what drives human beings at their deepest level.</div>
+        </div>
+        <div class="cat-page-card" onclick="showPage('books')">
+          <div class="cat-page-icon">🚀</div>
+          <div class="cat-page-name">Self-Development</div>
+          <div class="cat-page-desc">Books that don't just inspire — they give you the frameworks to actually change.</div>
+        </div>
+        <div class="cat-page-card" onclick="showPage('books')">
+          <div class="cat-page-icon">💰</div>
+          <div class="cat-page-name">Wealth & Investing</div>
+          <div class="cat-page-desc">Timeless wisdom on building, protecting, and thinking intelligently about money.</div>
+        </div>
+        <div class="cat-page-card" onclick="showPage('books')">
+          <div class="cat-page-icon">📜</div>
+          <div class="cat-page-name">Biographies & Memoirs</div>
+          <div class="cat-page-desc">Live extraordinary lives through the eyes of those who actually lived them.</div>
+        </div>
+        <div class="cat-page-card" onclick="showPage('books')">
+          <div class="cat-page-icon">📚</div>
+          <div class="cat-page-name">Fiction & Novels</div>
+          <div class="cat-page-desc">Stories that illuminate truth in ways that non-fiction alone cannot reach.</div>
+        </div>
+        <div class="cat-page-card" onclick="showPage('books')">
+          <div class="cat-page-icon">🕊️</div>
+          <div class="cat-page-name">Spirituality</div>
+          <div class="cat-page-desc">Books that explore the deeper dimensions of faith, consciousness, and inner life.</div>
+        </div>
+        <div class="cat-page-card" onclick="showPage('books')">
+          <div class="cat-page-icon">🏺</div>
+          <div class="cat-page-name">History</div>
+          <div class="cat-page-desc">Understanding where we have been — the only way to understand where we are going.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════
+     ABOUT PAGE
+══════════════════════════════════════════ -->
+<div class="page" id="page-about">
+  <div class="page-hero-bg">
+    <div class="section-label" style="justify-content:center;color:var(--gold);">Our Story</div>
+    <h1>About The Reading Compass</h1>
+    <p>A personal story about books, transformation, and why curation matters.</p>
+  </div>
+
+  <section>
+    <div class="section-inner" style="max-width:780px;">
+      <div style="font-family:'Playfair Display',serif;font-size:1.5rem;font-style:italic;color:var(--text-dark);line-height:1.6;margin-bottom:2rem;padding-left:1.5rem;border-left:3px solid var(--gold);">
+        "Books gave me a second pair of eyes — eyes that could see further, understand deeper, and judge more wisely."
+      </div>
+
+      <p style="font-size:1.05rem;line-height:1.9;color:var(--text-body);margin-bottom:1.5rem;">I was not born a reader. I became one out of necessity — out of a restlessness that nothing else could settle. I remember picking up my first serious book during a period of real confusion in my life, when questions about who I was and what any of this was for seemed louder than anything around me. That book did not answer everything. But it made the questions feel less terrifying.</p>
+
+      <p style="font-size:1.05rem;line-height:1.9;color:var(--text-body);margin-bottom:1.5rem;">That experience never left me. I kept reading — philosophy, psychology, biography, history, great novels — and I kept noticing the same thing: the right book, at the right time, can do something that no other medium can. It can reach into a person and rearrange something that needed rearranging.</p>
+
+      <p style="font-size:1.05rem;line-height:1.9;color:var(--text-body);margin-bottom:1.5rem;">The Reading Compass began as a personal list — books I wanted to remember, books I kept recommending to friends, books I found myself re-reading years later. It grew into something I wanted to share more widely, because too many great books go unread simply because no one ever pointed the right person toward them.</p>
+
+      <p style="font-size:1.05rem;line-height:1.9;color:var(--text-body);margin-bottom:2.5rem;">Everything here is handpicked. Every summary is written from real experience of the book. I do not publish books I haven't read, and I do not write recommendations I don't believe in. This is a compass — something to help you find your way through the overwhelming noise of modern publishing toward the books that will genuinely matter to you.</p>
+
+      <div style="background:var(--gray);border-radius:var(--radius-lg);padding:2.5rem;margin-bottom:2.5rem;">
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.25rem;margin-bottom:1.5rem;color:var(--text-dark);">What I Believe About Reading</h3>
+        <div class="about-values">
+          <div class="about-value">
+            <div class="about-value-icon">📖</div>
+            <div class="about-value-text">
+              <strong>Books are compressed wisdom</strong>
+              <span>A great author may spend 30 years learning something and condense it into 250 pages. Reading is the highest-leverage investment of time available to us.</span>
+            </div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">🌱</div>
+            <div class="about-value-text">
+              <strong>The right book at the right time</strong>
+              <span>Not every great book is right for every person right now. My goal is matching — finding the book that speaks to where you actually are.</span>
+            </div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">🔍</div>
+            <div class="about-value-text">
+              <strong>Depth over breadth</strong>
+              <span>I would rather recommend ten great books that someone actually reads and absorbs than list a hundred books that collect digital dust.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="btn-primary" onclick="showPage('books')" style="display:inline-flex;">Explore the Collection →</a>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════
+     BLOG PAGE
+══════════════════════════════════════════ -->
+<div class="page" id="page-blog">
+  <div class="page-hero-bg">
+    <div class="section-label" style="justify-content:center;color:var(--gold);">Ideas & Guides</div>
+    <h1>The Reading Compass Blog</h1>
+    <p>Reading guides, book lists, and essays on ideas that matter.</p>
+  </div>
+
+  <section>
+    <div class="section-inner">
+      <div class="blog-page-grid">
+        <div class="blog-main">
+          <div class="blog-grid" style="grid-template-columns:1fr;">
+            <a href="#" class="blog-card">
+              <div class="blog-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&h=300&fit=crop" alt="Best books 2026" class="blog-card-img" style="height:240px;" />
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-tag">Reading Guide · Best Books 2026</div>
+                <div class="blog-card-title" style="font-size:1.4rem;">The 15 Best Books to Read in 2026 (That Will Actually Change You)</div>
+                <div class="blog-card-excerpt">Not the bestseller list. Not what's trending on social media. These are the books that readers come back to years later and say: this one was different. This one stayed with me. Here is my curated list for 2026 — chosen not for popularity, but for depth, staying power, and the capacity to genuinely shift how you see your life.</div>
+                <div class="blog-card-meta"><span>📅 May 2026</span> · <span>8 min read</span></div>
+              </div>
+            </a>
+
+            <a href="#" class="blog-card">
+              <div class="blog-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1519682577862-22b62b24e493?w=800&h=220&fit=crop" alt="Philosophy books" class="blog-card-img" style="height:200px;" />
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-tag">Philosophy · Best Philosophy Books</div>
+                <div class="blog-card-title" style="font-size:1.3rem;">5 Philosophy Books That Will Make You Question Everything You Know</div>
+                <div class="blog-card-excerpt">Philosophy isn't an academic exercise reserved for lecture halls. It is a survival tool. These five books — from the ancient Stoics to modern existentialists — will permanently alter the lens through which you see the world, other people, and yourself.</div>
+                <div class="blog-card-meta"><span>📅 April 2026</span> · <span>6 min read</span></div>
+              </div>
+            </a>
+
+            <a href="#" class="blog-card">
+              <div class="blog-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=800&h=220&fit=crop" alt="Purpose books" class="blog-card-img" style="height:200px;" />
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-tag">Purpose & Meaning · Books About Purpose</div>
+                <div class="blog-card-title" style="font-size:1.3rem;">Books About Purpose and Meaning: A Reading Path for the Lost and Searching</div>
+                <div class="blog-card-excerpt">If you are going through a period where nothing feels clear — where you are questioning your direction, your choices, or what you are even doing with your life — these books won't give you all the answers. But they will make the search feel worthwhile, and they will remind you that this restlessness is not a flaw. It is a compass.</div>
+                <div class="blog-card-meta"><span>📅 March 2026</span> · <span>7 min read</span></div>
+              </div>
+            </a>
+
+            <a href="#" class="blog-card">
+              <div class="blog-card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=220&fit=crop" alt="Psychology books" class="blog-card-img" style="height:200px;" />
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-tag">Psychology · Best Psychology Books</div>
+                <div class="blog-card-title" style="font-size:1.3rem;">The 7 Best Psychology Books for Understanding Human Behavior in 2026</div>
+                <div class="blog-card-excerpt">Understanding why people — including yourself — do what they do is one of the most valuable skills you can develop. These seven psychology books offer genuine insight, written by practitioners and researchers who changed the field.</div>
+                <div class="blog-card-meta"><span>📅 February 2026</span> · <span>9 min read</span></div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="blog-sidebar">
+          <div class="sidebar-widget">
+            <h3>Browse Topics</h3>
+            <span class="sidebar-tag">Best Books 2026</span>
+            <span class="sidebar-tag">Philosophy</span>
+            <span class="sidebar-tag">Psychology</span>
+            <span class="sidebar-tag">Purpose & Meaning</span>
+            <span class="sidebar-tag">Wealth</span>
+            <span class="sidebar-tag">Biography</span>
+            <span class="sidebar-tag">Reading Guides</span>
+            <span class="sidebar-tag">Spirituality</span>
+            <span class="sidebar-tag">History</span>
+            <span class="sidebar-tag">Fiction</span>
+            <span class="sidebar-tag">Timeless Classics</span>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3>Most Popular</h3>
+            <div style="display:flex;flex-direction:column;gap:1rem;">
+              <div style="display:flex;gap:0.75rem;align-items:flex-start;cursor:pointer;" onclick="showPage('book-detail')">
+                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=60&h=60&fit=crop" style="width:52px;height:52px;border-radius:6px;object-fit:cover;flex-shrink:0;" />
+                <div>
+                  <div style="font-weight:600;font-size:0.85rem;color:var(--text-dark);line-height:1.3;">Man's Search for Meaning</div>
+                  <div style="font-size:0.75rem;color:var(--gray-text);">Viktor E. Frankl</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:0.75rem;align-items:flex-start;cursor:pointer;" onclick="showPage('book-detail')">
+                <img src="https://images.unsplash.com/photo-1588058365548-9ded1f2a3b1e?w=60&h=60&fit=crop" style="width:52px;height:52px;border-radius:6px;object-fit:cover;flex-shrink:0;" />
+                <div>
+                  <div style="font-weight:600;font-size:0.85rem;color:var(--text-dark);line-height:1.3;">Meditations</div>
+                  <div style="font-size:0.75rem;color:var(--gray-text);">Marcus Aurelius</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:0.75rem;align-items:flex-start;cursor:pointer;" onclick="showPage('book-detail')">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop" style="width:52px;height:52px;border-radius:6px;object-fit:cover;flex-shrink:0;" />
+                <div>
+                  <div style="font-weight:600;font-size:0.85rem;color:var(--text-dark);line-height:1.3;">The Intelligent Investor</div>
+                  <div style="font-size:0.75rem;color:var(--gray-text);">Benjamin Graham</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-widget" style="background:linear-gradient(135deg,#0F172A,#1E293B);border:1px solid rgba(212,175,55,0.2);">
+            <h3 style="color:#fff;">Join the Newsletter</h3>
+            <p style="font-size:0.83rem;color:rgba(255,255,255,0.5);margin-bottom:1rem;line-height:1.7;">Get weekly book picks and reading guides delivered to your inbox.</p>
+            <input type="email" placeholder="Your email..." style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-family:'Inter',sans-serif;font-size:0.85rem;outline:none;margin-bottom:0.75rem;" />
+            <button class="newsletter-btn" style="width:100%;border-radius:8px;" onclick="subscribeNewsletter()">Subscribe →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════
+     NEWSLETTER PAGE
+══════════════════════════════════════════ -->
+<div class="page" id="page-newsletter">
+  <div class="page-hero-bg">
+    <div class="section-label" style="justify-content:center;color:var(--gold);">Weekly Reads</div>
+    <h1>The Reading Compass Newsletter</h1>
+    <p>One email per week. Books, ideas, and insights for thoughtful readers.</p>
+  </div>
+
+  <section>
+    <div class="section-inner">
+      <div class="newsletter-page">
+        <p style="font-size:1.05rem;color:var(--text-body);line-height:1.9;margin-bottom:1rem;">Every week, I send out a thoughtfully curated email to readers who want more than just the bestseller list. This is a newsletter for people who read to grow — not just to finish books.</p>
+
+        <ul class="benefits-list">
+          <li>One carefully chosen book recommendation each week, with a personal note on why it matters</li>
+          <li>A short reading guide or key lesson from a book I've recently absorbed</li>
+          <li>A quote worth sitting with — the kind that surfaces at the right moment</li>
+          <li>Occasional deep-dives: best philosophy books, books about purpose, reading paths for life stages</li>
+          <li>No algorithm, no sponsored content, no noise — just a reader writing for readers</li>
+        </ul>
+
+        <div style="background:var(--gray);border-radius:var(--radius-lg);padding:2.5rem;margin:2rem 0;">
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--text-dark);margin-bottom:1.5rem;">Subscribe — It's Free</h3>
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="e.g. Ahmad" />
+          </div>
+          <div class="form-group">
+            <label>Your Email Address</label>
+            <input type="email" placeholder="your@email.com" id="nl-email" />
+          </div>
+          <button class="btn-primary" style="width:100%;justify-content:center;" onclick="subscribeNewsletter()">
+            📖 Join 5,000+ Thoughtful Readers
+          </button>
+          <p style="font-size:0.78rem;color:var(--gray-text);margin-top:1rem;text-align:center;">One email per week. No spam. Unsubscribe anytime with one click.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════
+     CONTACT PAGE
+══════════════════════════════════════════ -->
+<div class="page" id="page-contact">
+  <div class="page-hero-bg">
+    <div class="section-label" style="justify-content:center;color:var(--gold);">Get in Touch</div>
+    <h1>Contact The Reading Compass</h1>
+    <p>Have a book suggestion, a question, or a collaboration idea? I'd love to hear from you.</p>
+  </div>
+
+  <section>
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--text-dark);margin-bottom:1.75rem;">Let's Connect</h3>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📧</div>
+            <div>
+              <div class="contact-info-label">Email</div>
+              <div class="contact-info-value">biochmistman7@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📱</div>
+            <div>
+              <div class="contact-info-label">Phone / WhatsApp</div>
+              <div class="contact-info-value">+92 348 190 6587</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📍</div>
+            <div>
+              <div class="contact-info-label">Location</div>
+              <div class="contact-info-value">Pakistan</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">⏰</div>
+            <div>
+              <div class="contact-info-label">Response Time</div>
+              <div class="contact-info-value">Usually within 24–48 hours</div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <h4 style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--text-dark);margin-bottom:1rem;">What I'm Open To</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem;">
+            <li style="font-size:0.88rem;color:var(--text-body);display:flex;gap:0.5rem;"><span class="gold">✦</span> Book recommendations to consider</li>
+            <li style="font-size:0.88rem;color:var(--text-body);display:flex;gap:0.5rem;"><span class="gold">✦</span> Author or publisher collaborations</li>
+            <li style="font-size:0.88rem;color:var(--text-body);display:flex;gap:0.5rem;"><span class="gold">✦</span> Newsletter sponsorships</li>
+            <li style="font-size:0.88rem;color:var(--text-body);display:flex;gap:0.5rem;"><span class="gold">✦</span> Reading guide partnerships</li>
+            <li style="font-size:0.88rem;color:var(--text-body);display:flex;gap:0.5rem;"><span class="gold">✦</span> Reader feedback and questions</li>
+          </ul>
+        </div>
+
+        <div class="contact-form">
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--text-dark);margin-bottom:1.75rem;">Send a Message</h3>
+
+          <div class="form-group">
+            <label>Your Name *</label>
+            <input type="text" placeholder="Your full name" />
+          </div>
+
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" placeholder="your@email.com" />
+          </div>
+
+          <div class="form-group">
+            <label>Subject</label>
+            <select>
+              <option>Book Recommendation</option>
+              <option>Collaboration Inquiry</option>
+              <option>Newsletter Sponsorship</option>
+              <option>General Question</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Message *</label>
+            <textarea placeholder="Tell me what's on your mind — a book you think I should read, a question, or anything else..."></textarea>
+          </div>
+
+          <button class="btn-primary" style="width:100%;justify-content:center;" onclick="sendContact()">
+            Send Message →
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-logo">
+          <div class="footer-brand-logo-icon">📖</div>
+          <span class="footer-brand-logo-text">The Reading Compass</span>
+        </div>
+        <p class="footer-brand-desc">Handpicked books on philosophy, psychology, meaning, and timeless wisdom. A compass for readers who want to grow.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social" title="Twitter/X">𝕏</a>
+          <a href="#" class="footer-social" title="Instagram">📷</a>
+          <a href="#" class="footer-social" title="YouTube">▶</a>
+          <a href="#" class="footer-social" title="WhatsApp" onclick="window.open('https://wa.me/923481906587')">💬</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#" onclick="showPage('home')">Home</a></li>
+          <li><a href="#" onclick="showPage('books')">All Books</a></li>
+          <li><a href="#" onclick="showPage('categories')">Categories</a></li>
+          <li><a href="#" onclick="showPage('blog')">Blog</a></li>
+          <li><a href="#" onclick="showPage('about')">About</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#" onclick="showPage('categories')">Philosophy</a></li>
+          <li><a href="#" onclick="showPage('categories')">Psychology</a></li>
+          <li><a href="#" onclick="showPage('categories')">Purpose & Meaning</a></li>
+          <li><a href="#" onclick="showPage('categories')">Wealth & Investing</a></li>
+          <li><a href="#" onclick="showPage('categories')">Biographies</a></li>
+          <li><a href="#" onclick="showPage('categories')">Spirituality</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#" onclick="showPage('newsletter')">Newsletter</a></li>
+          <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+          <li><a href="mailto:biochmistman7@gmail.com">biochmistman7@gmail.com</a></li>
+          <li><a href="tel:+923481906587">+92 348 190 6587</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 The Reading Compass. All rights reserved. <em>Books That Change the Way You Think.</em></p>
+      <p>Built with ❤️ for readers everywhere · <a href="#">Privacy</a> · <a href="#">Disclaimer</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════════ -->
+<script>
+  // ── Page Router ──
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    const target = document.getElementById('page-' + id);
+    if (target) {
+      target.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    // close mobile menu
+    document.getElementById('nav-links').classList.remove('open');
+    // re-trigger reveals
+    setTimeout(initReveal, 100);
+  }
+
+  function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+  // ── Reading Progress ──
+  window.addEventListener('scroll', () => {
+    const scrollTop = document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    document.getElementById('progress-bar').style.width = progress + '%';
+  });
+
+  // ── Dark Mode ──
+  let isDark = false;
+  function toggleTheme() {
+    isDark = !isDark;
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : '');
+    document.getElementById('theme-icon').innerHTML = isDark
+      ? '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>'
+      : '<circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>';
+    document.getElementById('theme-icon').setAttribute('stroke', 'currentColor');
+    document.getElementById('theme-icon').setAttribute('fill', isDark ? 'currentColor' : 'none');
+  }
+
+  // ── Mobile Menu ──
+  function toggleMenu() {
+    document.getElementById('nav-links').classList.toggle('open');
+  }
+
+  // ── Scroll Reveal ──
+  function initReveal() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  }
+  initReveal();
+
+  // ── Toast ──
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 3500);
+  }
+
+  // ── Newsletter ──
+  function subscribeNewsletter() {
+    showToast('🎉 Welcome! Your first book recommendation arrives soon.');
+  }
+
+  // ── Contact ──
+  function sendContact() {
+    showToast('✉️ Message sent! I\'ll reply within 24–48 hours.');
+  }
+
+  // ── Book Filter ──
+  function filterBooks(cat, btn) {
+    document.querySelectorAll('#all-books-grid .book-card').forEach(card => {
+      if (cat === 'all' || card.dataset.cat === cat) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    document.querySelectorAll('[onclick^="filterBooks"]').forEach(b => {
+      b.style.background = '';
+      b.style.color = '';
+    });
+    btn.style.background = 'var(--gold)';
+    btn.style.color = 'var(--navy)';
+  }
+
+  // ── Search ──
+  function handleSearch(val) {
+    if (val.trim().length > 2) {
+      showPage('books');
+      const q = val.toLowerCase();
+      document.querySelectorAll('#all-books-grid .book-card').forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(q) ? '' : 'none';
+      });
+    }
+  }
+
+  // ── Smooth hover on nav ──
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', e => {
+      if (a.classList.contains('btn-nav')) return;
+      e.preventDefault();
+    });
+  });
+</script>
+
+</body>
+</html>
